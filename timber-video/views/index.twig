@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    {% for post in posts %}
+
+        <h1>{{post.title}}</h1>
+
+        {% if post.meta("guest_author") %}
+            Guest Author: {{post.meta("guest_author").display_name}}
+        {% endif %}
+
+        <p>{{post.preview}}</p>
+
+        <a href="{{post.link}}">Read Article</a>
+
+        <hr>
+
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,16 @@
+<!doctype html>
+
+    <head>
+        <link rel="stylesheet" href="{{ site.theme.link }}/style.css" type="text/css" media="screen" />
+        {{function('wp_head')}}
+    </head>
+
+    <body class="{{body_class}}">
+
+        {% block content %}
+            Sorry, no content
+        {% endblock %}
+
+        {{ function('wp_footer') }}
+    </body>
+</html>
